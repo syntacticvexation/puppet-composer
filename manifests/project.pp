@@ -57,7 +57,6 @@ define composer::project (
   $lock        = false,
   $user        = 'root',
 ) {
-  include composer
 
   validate_re($ensure, '^(present|installed|latest)$', '$ensure must be one of present or latest.')
   validate_re($prefer, '^(dist|source)$', '$prefer can only be one of source or dist. See `composer install --help`.')
